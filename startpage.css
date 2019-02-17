@@ -1,0 +1,217 @@
+:root {
+    /*Custom props*/
+    --searchbox-color: #FFF;
+    --option-width: 7vw;
+    --img-width: 3vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    border-style: none;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#container > div {
+    width: 33vw;
+    height: 33vh;
+}
+
+#container > #content {
+    /*Center the form in the div*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container > #clock {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock > #time {
+    font-size: 3rem;
+    margin-top: 10vh;
+}
+
+#clock > #date {
+    font-size: 1.5rem;
+    margin-top: 5vh;
+}
+
+#buttonbox {
+    display: flex;
+    flex-direction: row;
+}
+
+#search-button {
+    height: 5vh;
+    width: 3vw;
+    background-color: var(--searchbox-color);
+}
+
+input {
+    width: 100%;
+    height: 5vh;
+    box-shadow: #333 2px 2px;
+    margin-bottom: 5px;
+}
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.options-child {
+    width: var(--option-width);
+    height: 10vh;
+}
+
+.options-child:hover {
+
+}
+
+#options #duckduckgo {
+    background-color: #A20;
+    color: #410;
+}
+
+#options #duckduckgo:hover, #options #duckduckgo:focus {
+    background-color: #D53;
+}
+
+#options #google {
+    background-color: #04B;
+    color: #025;
+}
+
+#options #google:hover, #options #google:focus {
+    background-color: #37E;
+}
+
+#options #wikipedia {
+    background-color: #070;
+    color: #030;
+}
+
+#options #wikipedia:hover, #options #wikipedia:focus {
+    background-color: #3A3;
+}
+
+#options #amazon {
+    background-color: #C91;
+    color: #440;
+}
+
+#options #amazon:hover, #options #amazon:focus {
+    background-color: #FC4;
+}
+
+img {
+    width: var(--img-width);
+    height: var(--img-width);
+    transform: translateX(2vw);
+    margin-top: 0.5vh;
+}
+
+.active {
+    width: 8vw;
+    height: 11vh;
+    box-shadow: #333 5px 5px;
+}
+
+
+
+/******************************************************************
+                        @MEDIA QUERIES BELOW
+*******************************************************************/
+
+
+@media (min-width: 0px) {
+    .option-description {
+        font-size: 0rem; /*Remove text on small devices*/
+    }
+}
+
+@media (min-width: 720px) {
+    .option-description {
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 880px) {
+    .option-description {
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .option-description {
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1170px) {
+    .option-description {
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .option-description {
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1170px) {
+    img {
+        width: calc(var(--img-width) * 1.5);
+        height: calc(var(--img-width) * 1.5);
+    }
+}
+
+@media (max-width: 720px) {
+    .options-child {
+        height: 6vh;
+    }
+
+    .active {
+        height: 7vh;
+    }
+}
+
+@media (max-width: 760px) {
+    #clock > #time {
+        font-size: 2rem;
+        margin-top: 6vh;
+    }
+
+    #clock > #date {
+        font-size: 1rem;
+        margin-top: 3vh;
+    }
+}
