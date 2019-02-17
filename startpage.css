@@ -205,10 +205,12 @@ img {
     }
 }
 
+
 @media (max-width: 760px) {
 
     #clock {
         transform: translateX(-33vw);
+        align-items: left;
     }
 
     #clock > #time {
@@ -223,5 +225,21 @@ img {
 
     #search-button {
         font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 410px) {
+    #clock > #time {
+        font-size: 1rem;
+    }
+    #clock > #date {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-height: 680px) {
+    img {
+        width: var(--img-width);
+        height: var(--img-width);
     }
 }
