@@ -23,7 +23,6 @@
 #container > div {
     /*width: 33vw;*/
     height: 33vh;
-    border: dotted white;/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 }
 
 #container > #content {
