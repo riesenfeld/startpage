@@ -2,7 +2,7 @@
     /*Custom props*/
     --searchbox-color: #FFF;
     --option-width: 7vw;
-    --img-width: 3vw;
+    --img-width: 4vw;
 }
 
 * {
@@ -17,12 +17,13 @@
 #container {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 3fr 2fr;
 }
 
 #container > div {
-    width: 33vw;
+    /*width: 33vw;*/
     height: 33vh;
+    border: dotted white;/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 }
 
 #container > #content {
@@ -59,6 +60,10 @@
     height: 5vh;
     width: 3vw;
     background-color: var(--searchbox-color);
+}
+
+#search-button:hover {
+    font-size: 1.2rem;
 }
 
 input {
@@ -120,14 +125,18 @@ input {
 img {
     width: var(--img-width);
     height: var(--img-width);
-    transform: translateX(2vw);
-    margin-top: 0.5vh;
+    transform: translateX(1.5vw);
+    margin-top: 0vh;
 }
 
 .active {
     width: 8vw;
     height: 11vh;
-    box-shadow: #333 5px 5px;
+    box-shadow: #333 4px 4px;
+}
+
+.active > img {
+    transform: translateX(2vw);
 }
 
 
@@ -197,11 +206,13 @@ img {
 
 @media (max-width: 720px) {
     .options-child {
-        height: 6vh;
+        height: 3vh;
+        padding-top: 0vh;
     }
 
     .active {
-        height: 7vh;
+        height: 3.5vh;
+        box-shadow: #333 3px 3px;
     }
 }
 
@@ -214,7 +225,7 @@ img {
     }
 
     #clock > #time {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-top: 6vh;
     }
 
@@ -224,6 +235,7 @@ img {
     }
 
     #search-button {
+        width: 30%;
         font-size: 0.6rem;
     }
 }
