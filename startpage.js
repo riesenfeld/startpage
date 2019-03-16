@@ -4,13 +4,13 @@ function forwardSearch() {
     let searchType = document.getElementsByClassName('active').item(0).id;
     switch(searchType) {
         case 'google':
-            searchTerm += '!g';
+            searchTerm += ' !g';
             break;
         case 'wikipedia':
-            searchTerm += '!w';
+            searchTerm += ' !w';
             break;
         case 'amazon':
-            searchTerm += '!a';
+            searchTerm += ' !a';
             break;
         default:
             break;
