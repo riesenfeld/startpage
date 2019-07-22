@@ -57,7 +57,7 @@
 #search-button {
     height: 5vh;
     width: 3vw;
-    background-color: var(--searchbox-color);
+    background-color: #DDD;
 }
 
 #search-button:hover {
@@ -121,8 +121,8 @@ input {
 }
 
 img {
-    width: var(--img-width);
-    height: var(--img-width);
+    /*width: calc(var(--img-width) * 0.5);*/
+    /*height: var(--img-width);*/
     transform: translateX(1.5vw);
     margin-top: 0vh;
 }
@@ -155,7 +155,7 @@ img {
         text-align: center;
         font-family: sans-serif;
         font-weight: bold;
-        font-size: 0.5rem;
+        font-size: 1.2rem; /***************************************** FIX */
     }
 }
 
@@ -164,7 +164,7 @@ img {
         text-align: center;
         font-family: sans-serif;
         font-weight: bold;
-        font-size: 0.6rem;
+        font-size: 0.6rem; /************************************ FIX */
     }
 }
 
@@ -173,7 +173,7 @@ img {
         text-align: center;
         font-family: sans-serif;
         font-weight: bold;
-        font-size: 0.7rem;
+        font-size: 0.7rem; /************************************ FIX */
     }
 }
 
@@ -182,7 +182,7 @@ img {
         text-align: center;
         font-family: sans-serif;
         font-weight: bold;
-        font-size: 0.8rem;
+        font-size: 0.8rem; /************************************ FIX */
     }
 }
 
@@ -191,28 +191,77 @@ img {
         text-align: center;
         font-family: sans-serif;
         font-weight: bold;
-        font-size: 0.9rem;
+        font-size: 0.9rem; /************************************ FIX */
     }
+}
+
+@media (min-width: 1171px) {
+    /*img {*/
+        /*width: calc(var(--img-width));*/
+        /*height: calc(var(--img-width));*/
+    /*}*/
 }
 
 @media (max-width: 1170px) {
     img {
-        width: calc(var(--img-width) * 1.5);
-        height: calc(var(--img-width) * 1.5);
+        width: calc(var(--img-width) * 2.8);
+        height: calc(var(--img-width) * 2.8);
     }
 }
 
-@media (max-width: 720px) {
-    .options-child {
-        height: 3vh;
-        padding-top: 0vh;
+@media (min-width: 1023px) { /*Layout and sizing for iPad Pro */
+
+    @media (min-height: 1023px) {
+        #content {
+            width: 60vw;
+        }
+
+        .options-child {
+            width: 14vw;
+            height: 14vh;
+        }
+
+        .option-description {
+            font-size: 1.4rem;
+        }
+
+        img {
+            width: calc(var(--img-width) * 1.1);
+            height: calc(var(--img-width) * 1.1);
+            padding-left: 3vw;
+        }
     }
 
-    .active {
-        height: 3.5vh;
-        box-shadow: #333 1px 1px;
+    @media (max-height: 1023px) {
+        .options-child {
+            width: 12vw;
+            height: 12vh;
+        }
+        img {
+            width: calc(var(--img-width) * 0.9);
+            height: calc(var(--img-width) * 0.9);
+            padding-left: 2.4vw;
+        }
     }
 }
+
+@media  (max-width: 1023px) {
+
+    @media (min-width: 769px) {
+        img {
+            width: var(--img-width);
+            height: var(--img-width);
+        }
+
+        @media (max-width: 879px) {
+            .option-description {
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -254,38 +303,71 @@ img {
     #searchterm {
         height: 10vh;
     }
-    #search-button {
-        height: 10vh;
-    }
 
     #clock > #time {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-top: 6vh;
     }
 
     #clock > #date {
-        font-size: 1.6rem;
+        font-size: 2.4rem;
         margin-top: 3vh;
     }
 
     #search-button {
-        width: 30%;
-        font-size: 0.6rem;
+        height: 10vh;
+        width: 18%;
+        font-size: 2.4rem;
     }
+
+    .options-child {
+        width: 18vw;
+        height: 12vh;
+        padding-top: 0vh;
+    }
+
+    .active {
+        height: 14vh;
+        box-shadow: #333 4px 4px;
+    }
+
 }
 
-@media (max-width: 410px) {
+@media (max-width: 720px) { /* Fet rid of this? */
+    .options-child {
+        height: 7vh;
+        padding-top: 0vh;
+    }
+
+    .active {
+        height: 7.5vh;
+        box-shadow: #333 1px 1px;
+    }
+
+    img {
+        padding-left: 1.5vw;
+    }
+
+    /*#time {*/
+        /*font-size: 6rem;*/
+    /*}*/
+}
+
+@media (max-width: 412px) {
     #clock > #time {
-        font-size: 1rem;
+        font-size: 2.5rem;
     }
     #clock > #date {
-        font-size: 0.6rem;
+        font-size: 1.5rem;
+    }
+    #search-button {
+        font-size: 1.6rem;
     }
 }
 
-@media (max-height: 680px) {
-    img {
-        width: var(--img-width);
-        height: var(--img-width);
-    }
-}
+/*@media (max-height: 680px) {*/
+    /*img {*/
+        /*width: calc(var(--img-width) * 2.8);*/
+        /*height: calc(var(--img-width) * 2.8);*/
+    /*}*/
+/*}*/
