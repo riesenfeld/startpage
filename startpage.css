@@ -265,9 +265,6 @@ img {
 
 
 @media (max-width: 768px) {
-    #container div {
-        border: 1px solid wheat;
-    }
 
     /*Swap order of grid items on small devices*/
     #first {
