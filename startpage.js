@@ -46,8 +46,6 @@ function updateClock(){
     let parsed = localeString.split(',');
     document.getElementById('date').innerText = translateToDayString(d.getDay()) + ', ' + parsed[0];
     document.getElementById('time').innerText = parsed[1];
-
-    //document.getElementById('clock').innerText = d.toLocaleString();
 }
 
 function translateToDayString(i) {
