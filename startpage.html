@@ -17,7 +17,7 @@
       </div>
       <div id="fourth"></div>
       <div id="content">
-        <form id="form">
+        <form id="form" onsubmit="event.preventDefault()">
           <div id="buttonbox">
             <input type="text" id="searchterm" onkeypress="handleKeypress(this.id, event)" />
             <button type="submit" id="search-button" onclick="forwardSearch()">&#128269;</button>
