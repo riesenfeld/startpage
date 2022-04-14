@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Aron Riesenfeld" />
+    <meta name="description" content="A simple startpage." />
+    <title>Startpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="scripts/background_sources.js"></script>
+  </head>
+  <body>
+    <div id="background-image-container"><img src="" alt="" id="background-image" /></div>
+    <div id="background-overlay"></div>
+    <div id="clock">
+      <div id="clock-area"><time id="time">3:51:10 PM</time></div>
+      <div id="clock-area"><time id="date">Wednesday, 4/13/2022</time></div>
+    </div>
+    <main>
+      <div id="searchbar-backdrop">
+        <form id="form" onsubmit="event.preventDefault()">
+          <img src="images/ddg_logo.svg" alt="" id="search-type-image" width="20" height="20" />
+          <input type="text" id="searchterm" onkeypress="handleKeypress(this.id, event)" />
+          <select type="select" id="search-types" onchange="updateImage(this.value)">
+            <option value="duckduckgo" class="search-option">Search Duckduckgo</option>
+            <option value="google" class="search-option">Search Google</option>
+            <option value="wikipedia" class="search-option">Search Wikipedia</option>
+            <option value="amazon" class="search-option">Search Amazon</option>
+          </select>
+          <button type="submit" id="search-button" onclick="forwardSearch()"><img src="images/search_icon.svg" alt="" width="15" height="15" /></button>
+        </form>
+      </div>
+    </main>
+    <footer id="info-footer"></footer>
+    <script>
+      var searchTypeImage = document.getElementById("search-type-image")
+
+      var forwardSearch = function () {
+        let searchTerm = document.getElementById("searchterm").value
+        let searchType = document.getElementById("search-types").value
+        let url = "https://duckduckgo.com/?q="
+        switch (searchType) {
+          case "google":
+            url = "https://www.google.com/search?q="
+            break
+          case "wikipedia":
+            url = "https://en.wikipedia.org/w/index.php?search="
+            break
+          case "amazon":
+            url = "https://www.amazon.com/s?k="
+            break
+          default:
+            break
+        }
+        window.location.href = url + searchTerm
+      }
+      var updateImage = function (value) {
+        document.getElementById
+        switch (value) {
+          case "google":
+            searchTypeImage.src = "images/google_logo.svg"
+            break
+          case "wikipedia":
+            searchTypeImage.src = "images/wiki_logo.svg"
+            break
+          case "amazon":
+            searchTypeImage.src = "images/amazon_logo.svg"
+            break
+          default:
+            searchTypeImage.src = "images/ddg_logo.svg"
+            break
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --text-color: #ffffff;
+        --form-bg-color: #222222cc;
+        --form-bg-color-focus: #333333cc;
+        --border-style: 1px solid #00000000;
+        --border-radius: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #background-image-container {
+        position: absolute;
+        z-index: 0;
+      }
+      #background-image {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #background-overlay {
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+      }
+      #clock {
+        position: absolute;
+        z-index: 2;
+        top: 2vh;
+        right: 2vh;
+        color: white;
+      }
+      main {
+        position: fixed;
+        z-index: 3;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #searchbar-backdrop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4vh 2vw 4vh 2vw;
+        border-radius: 5px;
+        background-color: #88888822;
+      }
+      form {
+        display: flex;
+        align-items: center;
+      }
+      form > * {
+        height: 5vh;
+        border: var(--border-style);
+        border-radius: var(--border-radius);
+        background-color: var(--form-bg-color);
+      }
+      form > img {
+        width: 5vh;
+      }
+      form > input {
+        width: 40vw;
+        color: var(--text-color);
+      }
+      form > input:focus {
+        outline: none;
+        background-color: var(--form-bg-color-focus);
+      }
+      form > select {
+        color: var(--text-color);
+      }
+      form > select:focus {
+        outline: none;
+        background-color: var(--form-bg-color-focus);
+      }
+      form > button {
+        width: 5vh;
+        color: var(--text-color);
+      }
+      form > button:focus {
+        outline: none;
+        background-color: var(--form-bg-color-focus);
+      }
+      footer {
+        position: absolute;
+        z-index: 3;
+        bottom: 5px;
+        right: 5px;
+        max-width: 30vw;
+        background-color: var(--form-bg-color);
+        font-size: min(4vw, 0.8rem);
+      }
+      footer a {
+        color: white;
+      }
+      @media (max-width: 640px) {
+        footer {
+          font-size: min(2.5vw, 0.7rem);
+        }
+      }
+    </style>
+    <script type="text/javascript" src="scripts/background_image.js"></script>
+    <!-- <script type="text/javascript" src="scripts/background_overlay.js"></script> -->
+    <script type="text/javascript" src="scripts/background_overlay2.js"></script>
+  </body>
+</html>
