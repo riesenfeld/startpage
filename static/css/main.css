@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Saira";
+  src: url("/static/fonts/Saira-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+:root {
+  --text-color: #ffffff;
+  --backdrop-color-light: #aaaaaa66;
+  --form-bg-color: #222222cc;
+  --form-bg-color-focus: #333333cc;
+  --border-style: 1px solid #00000000;
+  --border-radius: 0px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* We need this so that the rotation of the clock doesn't introduce scrollbars.
+    * The alternative would be to set the top and right properties of the clock
+    * to sqrt((height/2)^2, (width/2)^2), a la Pythagoras, which would move the 
+    * clock far too low down in the page for good taste. */
+  overflow: hidden;
+}
+#background-image-container {
+  position: absolute;
+  z-index: 0;
+}
+#background-image {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#background-overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: overlay;
+}
+main {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#searchbar-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vh 2vw 4vh 2vw;
+  border-radius: 5px;
+  background-color: var(--backdrop-color-light);
+}
+form {
+  display: flex;
+  align-items: center;
+}
+form > * {
+  height: 5vh;
+  border: var(--border-style);
+  border-radius: var(--border-radius);
+  background-color: var(--form-bg-color);
+}
+form > img {
+  width: 5vh;
+}
+form > input {
+  width: 40vw;
+  color: var(--text-color);
+  font-family: "Saira", sans-serif;
+}
+form > input:focus {
+  outline: none;
+  background-color: var(--form-bg-color-focus);
+}
+form > select {
+  color: var(--text-color);
+  font-family: "Saira", sans-serif;
+}
+form > select:focus {
+  outline: none;
+  background-color: var(--form-bg-color-focus);
+}
+form > button {
+  width: 5vh;
+  color: var(--text-color);
+}
+form > button:focus {
+  outline: none;
+  background-color: var(--form-bg-color-focus);
+}
+footer {
+  position: absolute;
+  z-index: 2;
+  bottom: 5px;
+  right: 5px;
+  max-width: 30vw;
+  background-color: var(--form-bg-color);
+  font-size: min(4vw, 0.8rem);
+  font-family: "Saira", sans-serif;
+}
+footer a {
+  color: white;
+}
+@media (max-width: 640px) {
+  footer {
+    font-size: min(2.5vw, 0.7rem);
+  }
+}

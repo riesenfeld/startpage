@@ -1,46 +1,83 @@
 const overlay = document.getElementById("background-overlay")
 
-let params = {
-  color1: [255, 0, 0, 0.2],
-  color2: [0, 0, 255, 0.2],
-  degree: 0,
+const getRandomColor = function (alpha) {
+  return [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), alpha]
 }
 
-let countingUpOrDown = ["up", "up", "up"]
-
-const arrayToRGBA = function (arr) {
-  return `rgba(${arr[0]}, ${arr[1]}, ${arr[2]}, ${arr[3]})`
+let gradients = {
+  gradient1: {
+    angle: 0,
+    color1: getRandomColor(0.8),
+    color2: getRandomColor(0),
+    stop: 70.71,
+    countingUpOrDown1: ["up", "up", "up"],
+    countingUpOrDown2: ["up", "up", "up"],
+  },
+  gradient2: {
+    angle: 120,
+    color1: getRandomColor(0.8),
+    color2: getRandomColor(0),
+    stop: 70.71,
+    countingUpOrDown1: ["up", "up", "up"],
+    countingUpOrDown2: ["up", "up", "up"],
+  },
+  gradient3: {
+    angle: 240,
+    color1: getRandomColor(0.8),
+    color2: getRandomColor(0),
+    stop: 70.71,
+    countingUpOrDown1: ["up", "up", "up"],
+    countingUpOrDown2: ["up", "up", "up"],
+  },
 }
 
-const shiftColor = function (arr) {
+const shiftColor = function (colorArray, countingUpOrDown) {
   for (i = 0; i < 3; i++) {
     let rand = Math.floor(Math.random() * 10)
-    if (countingUpOrDown[i] == "up" && arr[i] + rand >= 360) {
+    if (countingUpOrDown[i] == "up" && colorArray[i] + rand >= 255) {
       countingUpOrDown[i] = "down"
-    } else if (countingUpOrDown[i] == "down" && arr[i] - rand <= -1) {
+    } else if (countingUpOrDown[i] == "down" && colorArray[i] - rand <= -1) {
       countingUpOrDown[i] = "up"
     }
 
     if (countingUpOrDown[i] == "up") {
-      arr[i] = arr[i] + 1
+      colorArray[i] = colorArray[i] + 1
     } else if (countingUpOrDown[i] == "down") {
-      arr[i] = arr[i] - 1
+      colorArray[i] = colorArray[i] - 1
     }
   }
-  return [arr[0], arr[1], arr[2], arr[3]]
+  return [colorArray[0], colorArray[1], colorArray[2], colorArray[3]]
+}
+
+const shiftColors = function () {
+  for (let gradient in gradients) {
+    shiftColor(gradients[gradient].color1, gradients[gradient].countingUpOrDown1)
+    shiftColor(gradients[gradient].color2, gradients[gradient].countingUpOrDown2)
+  }
+}
+
+const incrementAngles = function () {
+  for (gradient in gradients) {
+    gradients[gradient].angle = (gradients[gradient].angle + 1) % 360
+  }
+}
+
+const updateGradients = function () {
+  incrementAngles()
+  shiftColors()
+}
+
+const produceGradientString = function (gradient) {
+  const rgba1 = `rgba(${gradient.color1[0]}, ${gradient.color1[1]}, ${gradient.color1[2]}, ${gradient.color1[3]})`
+  const rgba2 = `rgba(${gradient.color2[0]}, ${gradient.color2[1]}, ${gradient.color2[2]}, ${gradient.color2[3]})`
+  return `linear-gradient(${gradient.angle}deg, ${rgba1}, ${rgba2} ${gradient.stop}%)`
 }
 
 const updateOverlay = function () {
-  params.degree = (params.degree + 1) % 360
-  params.color1 = shiftColor(params.color1)
-  params.color2 = shiftColor(params.color2)
-
-  let color1 = arrayToRGBA(params.color1)
-  let color2 = arrayToRGBA(params.color2)
-
-  gradientString = `linear-gradient(${params.degree}deg, ${color1}, ${color2})`
-  gradientString = `linear-gradient(45deg, red 0 50%, blue 50% 100%)`
-  overlay.style.background = gradientString
+  updateGradients()
+  let stackedGradientString = `${produceGradientString(gradients.gradient1)}, ${produceGradientString(gradients.gradient2)}, ${produceGradientString(gradients.gradient3)}`
+  overlay.style.background = stackedGradientString
 }
 
+updateOverlay()
 window.setInterval(updateOverlay, 50)

@@ -1,0 +1,429 @@
+/*
+ * Author: Aron Riesenfeld
+ */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes reset {
+  from {
+    transform: rotate(354deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.clock-area {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+#clock-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Saira", sans-serif;
+  color: white;
+  text-shadow: -1px -1px 5px black, 1px 1px 5px black, -1px 1px 5px black, 1px -1px 5px black;
+}
+
+#clock {
+  background: conic-gradient(#00000000 0deg 270deg, #8000807c 285deg, #0000ff80 300deg, #00800084 315deg, #ffff0088 330deg, #ff45008c 345deg, #ff000090 358deg, #ffffff94 360deg) border-box;
+  mask-image: url("/static/images/ring_mask.svg");
+  mask-size: 100%;
+  /* vendor prefix required for chromium-based browsers */
+  -webkit-mask-image: url("/static/images/ring_mask.svg");
+  -webkit-mask-size: 100%;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  transition: transform 0.7s cubic-bezier(0.9, 0, 1, 1);
+}
+
+#clock.fade-in {
+  /* We want to prevent the user from seeing the jarring rotation
+   * to the clock's starting position on page load */
+  animation: fade-in 1.2s linear;
+}
+
+#clock[data-seconds="0"] {
+  /* We use an animation here to prevent the rotation from rolling backward 
+   * when the clock ticks over to the next minute */
+  animation: reset 0.7s cubic-bezier(0.9, 0, 1, 1);
+}
+#clock[data-seconds="1"] {
+  transform: rotate(6deg);
+}
+#clock[data-seconds="2"] {
+  transform: rotate(12deg);
+}
+#clock[data-seconds="3"] {
+  transform: rotate(18deg);
+}
+#clock[data-seconds="4"] {
+  transform: rotate(24deg);
+}
+#clock[data-seconds="5"] {
+  transform: rotate(30deg);
+}
+#clock[data-seconds="6"] {
+  transform: rotate(36deg);
+}
+#clock[data-seconds="7"] {
+  transform: rotate(42deg);
+}
+#clock[data-seconds="8"] {
+  transform: rotate(48deg);
+}
+#clock[data-seconds="9"] {
+  transform: rotate(54deg);
+}
+#clock[data-seconds="10"] {
+  transform: rotate(60deg);
+}
+#clock[data-seconds="11"] {
+  transform: rotate(66deg);
+}
+#clock[data-seconds="12"] {
+  transform: rotate(72deg);
+}
+#clock[data-seconds="13"] {
+  transform: rotate(78deg);
+}
+#clock[data-seconds="14"] {
+  transform: rotate(84deg);
+}
+#clock[data-seconds="15"] {
+  transform: rotate(90deg);
+}
+#clock[data-seconds="16"] {
+  transform: rotate(96deg);
+}
+#clock[data-seconds="17"] {
+  transform: rotate(102deg);
+}
+#clock[data-seconds="18"] {
+  transform: rotate(108deg);
+}
+#clock[data-seconds="19"] {
+  transform: rotate(114deg);
+}
+#clock[data-seconds="20"] {
+  transform: rotate(120deg);
+}
+#clock[data-seconds="21"] {
+  transform: rotate(126deg);
+}
+#clock[data-seconds="22"] {
+  transform: rotate(132deg);
+}
+#clock[data-seconds="23"] {
+  transform: rotate(138deg);
+}
+#clock[data-seconds="24"] {
+  transform: rotate(144deg);
+}
+#clock[data-seconds="25"] {
+  transform: rotate(150deg);
+}
+#clock[data-seconds="26"] {
+  transform: rotate(156deg);
+}
+#clock[data-seconds="27"] {
+  transform: rotate(162deg);
+}
+#clock[data-seconds="28"] {
+  transform: rotate(168deg);
+}
+#clock[data-seconds="29"] {
+  transform: rotate(174deg);
+}
+#clock[data-seconds="30"] {
+  transform: rotate(180deg);
+}
+#clock[data-seconds="31"] {
+  transform: rotate(186deg);
+}
+#clock[data-seconds="32"] {
+  transform: rotate(192deg);
+}
+#clock[data-seconds="33"] {
+  transform: rotate(198deg);
+}
+#clock[data-seconds="34"] {
+  transform: rotate(204deg);
+}
+#clock[data-seconds="35"] {
+  transform: rotate(210deg);
+}
+#clock[data-seconds="36"] {
+  transform: rotate(216deg);
+}
+#clock[data-seconds="37"] {
+  transform: rotate(222deg);
+}
+#clock[data-seconds="38"] {
+  transform: rotate(228deg);
+}
+#clock[data-seconds="39"] {
+  transform: rotate(234deg);
+}
+#clock[data-seconds="40"] {
+  transform: rotate(240deg);
+}
+#clock[data-seconds="41"] {
+  transform: rotate(246deg);
+}
+#clock[data-seconds="42"] {
+  transform: rotate(252deg);
+}
+#clock[data-seconds="43"] {
+  transform: rotate(258deg);
+}
+#clock[data-seconds="44"] {
+  transform: rotate(264deg);
+}
+#clock[data-seconds="45"] {
+  transform: rotate(270deg);
+}
+#clock[data-seconds="46"] {
+  transform: rotate(276deg);
+}
+#clock[data-seconds="47"] {
+  transform: rotate(282deg);
+}
+#clock[data-seconds="48"] {
+  transform: rotate(288deg);
+}
+#clock[data-seconds="49"] {
+  transform: rotate(294deg);
+}
+#clock[data-seconds="50"] {
+  transform: rotate(300deg);
+}
+#clock[data-seconds="51"] {
+  transform: rotate(306deg);
+}
+#clock[data-seconds="52"] {
+  transform: rotate(312deg);
+}
+#clock[data-seconds="53"] {
+  transform: rotate(318deg);
+}
+#clock[data-seconds="54"] {
+  transform: rotate(324deg);
+}
+#clock[data-seconds="55"] {
+  transform: rotate(330deg);
+}
+#clock[data-seconds="56"] {
+  transform: rotate(336deg);
+}
+#clock[data-seconds="57"] {
+  transform: rotate(342deg);
+}
+#clock[data-seconds="58"] {
+  transform: rotate(348deg);
+}
+#clock[data-seconds="59"] {
+  transform: rotate(354deg);
+}
+
+/******************************************/
+/******************************************/
+/******************************************/
+
+/* 
+#clock[data-seconds="0"] {
+  transform: rotate(6deg);
+}
+#clock[data-seconds="1"] {
+  transform: rotate(12deg);
+}
+#clock[data-seconds="2"] {
+  transform: rotate(18deg);
+}
+#clock[data-seconds="3"] {
+  transform: rotate(24deg);
+}
+#clock[data-seconds="4"] {
+  transform: rotate(30deg);
+}
+#clock[data-seconds="5"] {
+  transform: rotate(36deg);
+}
+#clock[data-seconds="6"] {
+  transform: rotate(42deg);
+}
+#clock[data-seconds="7"] {
+  transform: rotate(48deg);
+}
+#clock[data-seconds="8"] {
+  transform: rotate(54deg);
+}
+#clock[data-seconds="9"] {
+  transform: rotate(60deg);
+}
+#clock[data-seconds="10"] {
+  transform: rotate(66deg);
+}
+#clock[data-seconds="11"] {
+  transform: rotate(72deg);
+}
+#clock[data-seconds="12"] {
+  transform: rotate(78deg);
+}
+#clock[data-seconds="13"] {
+  transform: rotate(84deg);
+}
+#clock[data-seconds="14"] {
+  transform: rotate(90deg);
+}
+#clock[data-seconds="15"] {
+  transform: rotate(96deg);
+}
+#clock[data-seconds="16"] {
+  transform: rotate(102deg);
+}
+#clock[data-seconds="17"] {
+  transform: rotate(108deg);
+}
+#clock[data-seconds="18"] {
+  transform: rotate(114deg);
+}
+#clock[data-seconds="19"] {
+  transform: rotate(120deg);
+}
+#clock[data-seconds="20"] {
+  transform: rotate(126deg);
+}
+#clock[data-seconds="21"] {
+  transform: rotate(132deg);
+}
+#clock[data-seconds="22"] {
+  transform: rotate(138deg);
+}
+#clock[data-seconds="23"] {
+  transform: rotate(144deg);
+}
+#clock[data-seconds="24"] {
+  transform: rotate(150deg);
+}
+#clock[data-seconds="25"] {
+  transform: rotate(156deg);
+}
+#clock[data-seconds="26"] {
+  transform: rotate(162deg);
+}
+#clock[data-seconds="27"] {
+  transform: rotate(168deg);
+}
+#clock[data-seconds="28"] {
+  transform: rotate(174deg);
+}
+#clock[data-seconds="29"] {
+  transform: rotate(180deg);
+}
+#clock[data-seconds="30"] {
+  transform: rotate(186deg);
+}
+#clock[data-seconds="31"] {
+  transform: rotate(192deg);
+}
+#clock[data-seconds="32"] {
+  transform: rotate(198deg);
+}
+#clock[data-seconds="33"] {
+  transform: rotate(204deg);
+}
+#clock[data-seconds="34"] {
+  transform: rotate(210deg);
+}
+#clock[data-seconds="35"] {
+  transform: rotate(216deg);
+}
+#clock[data-seconds="36"] {
+  transform: rotate(222deg);
+}
+#clock[data-seconds="37"] {
+  transform: rotate(228deg);
+}
+#clock[data-seconds="38"] {
+  transform: rotate(234deg);
+}
+#clock[data-seconds="39"] {
+  transform: rotate(240deg);
+}
+#clock[data-seconds="40"] {
+  transform: rotate(246deg);
+}
+#clock[data-seconds="41"] {
+  transform: rotate(252deg);
+}
+#clock[data-seconds="42"] {
+  transform: rotate(258deg);
+}
+#clock[data-seconds="43"] {
+  transform: rotate(264deg);
+}
+#clock[data-seconds="44"] {
+  transform: rotate(270deg);
+}
+#clock[data-seconds="45"] {
+  transform: rotate(276deg);
+}
+#clock[data-seconds="46"] {
+  transform: rotate(282deg);
+}
+#clock[data-seconds="47"] {
+  transform: rotate(288deg);
+}
+#clock[data-seconds="48"] {
+  transform: rotate(294deg);
+}
+#clock[data-seconds="49"] {
+  transform: rotate(300deg);
+}
+#clock[data-seconds="50"] {
+  transform: rotate(306deg);
+}
+#clock[data-seconds="51"] {
+  transform: rotate(312deg);
+}
+#clock[data-seconds="52"] {
+  transform: rotate(318deg);
+}
+#clock[data-seconds="53"] {
+  transform: rotate(324deg);
+}
+#clock[data-seconds="54"] {
+  transform: rotate(330deg);
+}
+#clock[data-seconds="55"] {
+  transform: rotate(336deg);
+}
+#clock[data-seconds="56"] {
+  transform: rotate(342deg);
+}
+#clock[data-seconds="57"] {
+  transform: rotate(348deg);
+}
+#clock[data-seconds="58"] {
+  transform: rotate(354deg);
+}
+#clock[data-seconds="59"] {
+  animation: reset 0.8s ease-in-out;
+} */

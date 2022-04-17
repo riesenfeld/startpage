@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="ring_mask.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="2.0869896"
+     inkscape:cx="107.33163"
+     inkscape:cy="174.4139"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="path846" />
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2431">
+      <rect
+         style="opacity:0.486331;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect2433"
+         width="50"
+         height="50"
+         x="5.6066017e-07"
+         y="3.5355339e-07" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="path846">
+      <path
+         style="color:#000000;fill:#000000;-inkscape-stroke:none;paint-order:fill markers stroke"
+         d="M 50,0 C 22.40861,0 0,22.40861 0,50 0,77.59139 22.40861,100 50,100 77.59139,100 100,77.59139 100,50 100,22.40861 77.59139,0 50,0 Z m 0,1 C 75.51286,1 96.154297,24.48714 96.154297,50 96.154297,75.51286 75.51286,96.154297 50,96.154297 24.48714,96.154297 3.8457031,75.51286 3.8457031,50 3.8457031,24.48714 24.48714,1 50,1 Z"
+         id="path1488"
+         sodipodi:nodetypes="ssssssssss"
+         clip-path="url(#clipPath2431)" />
+    </g>
+  </g>
+</svg>
