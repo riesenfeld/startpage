@@ -2,6 +2,8 @@ const imgContainer = document.getElementById("background-image-container")
 const img = document.getElementById("background-image")
 const info = document.getElementById("info-footer")
 
+const worker = new Worker("scripts/fetch_image.js")
+
 const pickRandomPhoto = function (photoArray) {
   const randomIndex = Math.floor(Math.random() * photoArray.length)
   return photoArray[randomIndex].path
@@ -52,9 +54,9 @@ const insertLineBreak = function (titleText) {
   }
 }
 
-const setBackgroundImage = function (obj) {
+const setBackgroundImage = function (obj, imageURL) {
   const resource = obj.url
-  const imageURL = `https://cdn.spacetelescope.org/archives/images/screen/${obj.id}.jpg`
+  // const imageURL = `https://cdn.spacetelescope.org/archives/images/screen/${obj.id}.jpg`
   const infoURL = `https://esahubble.org${resource}`
   const windowOrientation = detectWindowOrientation()
   const imageOrientation = detectImageOrientation(obj)
@@ -85,7 +87,14 @@ const initBackgroundImage = function () {
   if (obj == null) {
     obj = chooseRandomBackgroundImage()
   }
-  setBackgroundImage(obj)
+  worker.addEventListener("message", (message) => {
+    setBackgroundImage(obj, message.data)
+  })
+  worker.postMessage({
+    command: "fetch",
+    // id: obj.id,
+    id: "potw1112a",
+  })
 }
 
 initBackgroundImage()

@@ -1,3 +1,12 @@
+importScripts("https://sdk.amazonaws.com/js/aws-sdk-2.1090.0.min.js")
+/**
+ *  Listen for messages posted to this web worker
+ */
+addEventListener("message", (message) => {
+  if (message.data.command === "fetch") {
+    getObject(message.data.id)
+  }
+})
 /**
  *  AWS initialization
  */
@@ -36,9 +45,9 @@ const getObject = function (imageID) {
   s3.getObject(getObjectParams, function (err, data) {
     if (err) {
       /* If the S3 API fails, just get the image directly from the ESA Hubble CDN */
-      return makeFallbackURL(imageID)
+      postMessage(makeFallbackURL(imageID))
     } else {
-      return makeDataURL(data)
+      postMessage(makeDataURL(data))
     }
   })
 }
