@@ -38,6 +38,20 @@ const chooseRandomBackgroundImage = function () {
   return backgroundSources[randomIndex]
 }
 
+const insertLineBreak = function (titleText) {
+  const halfwayPoint = Math.ceil(titleText.length / 2)
+  const spaces = [...titleText.matchAll(" ")]
+  const indices = spaces.map((space) => space.index)
+  /* We want to make the two lines as even as possible */
+  const breakingPointAfter = indices.find((index) => index >= halfwayPoint)
+  const breakingPointBefore = indices.reverse().find((index) => index <= halfwayPoint)
+  if (breakingPointAfter - halfwayPoint < halfwayPoint - breakingPointBefore) {
+    return "<span>" + titleText.slice(0, breakingPointAfter + 1) + "</span><span>" + titleText.slice(breakingPointAfter + 1) + "</span>"
+  } else {
+    return "<span>" + titleText.slice(0, breakingPointBefore + 1) + "</span><span>" + titleText.slice(breakingPointBefore + 1) + "</span>"
+  }
+}
+
 const setBackgroundImage = function (obj) {
   const resource = obj.url
   const imageURL = `https://cdn.spacetelescope.org/archives/images/screen/${obj.id}.jpg`
@@ -58,8 +72,12 @@ const setBackgroundImage = function (obj) {
     imgContainer.style.height = "100vh"
   }
   img.src = imageURL
+
+  if (obj.title.length > 59) {
+    obj.title = insertLineBreak(obj.title)
+  }
   info.innerHTML = `<a href="${infoURL}">${obj.title}</a>`
-  console.log(obj.id)
+  console.log("Permanent URL for this background image: ?id=" + obj.id)
 }
 
 const initBackgroundImage = function () {

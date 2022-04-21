@@ -1,7 +1,7 @@
 const backgroundSources = [
   {
     id: "heic2017a",
-    title: "Hubble&#39;s View of Jupiter and Europa in August 2020",
+    title: "Hubble’s View of Jupiter and Europa in August 2020",
     width: 1663,
     height: 1375,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic2017a.jpg",
@@ -127,7 +127,7 @@ const backgroundSources = [
   },
   {
     id: "heic1808a",
-    title: "Hubble&#39;s 28th birthday picture: The Lagoon Nebula",
+    title: "Hubble’s 28th birthday picture: The Lagoon Nebula",
     width: 4782,
     height: 6028,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic1808a.jpg",
@@ -154,7 +154,7 @@ const backgroundSources = [
   },
   {
     id: "heic0601a",
-    title: "Hubble&#39;s sharpest view of the Orion Nebula",
+    title: "Hubble’s sharpest view of the Orion Nebula",
     width: 18000,
     height: 18000,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0601a.jpg",
@@ -199,7 +199,7 @@ const backgroundSources = [
   },
   {
     id: "heic0206c",
-    title: "Hubble&#39;s newest camera images ghostly star-forming pillar of gas and dust",
+    title: "Hubble’s newest camera images ghostly star-forming pillar of gas and dust",
     width: 4136,
     height: 3102,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0206c.jpg",
@@ -379,7 +379,7 @@ const backgroundSources = [
   },
   {
     id: "heic1708a",
-    title: "Jupiter&#39;s swirling colourful clouds",
+    title: "Jupiter’s swirling colourful clouds",
     width: 2000,
     height: 2000,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic1708a.jpg",
@@ -613,7 +613,7 @@ const backgroundSources = [
   },
   {
     id: "heic1206a",
-    title: "Hubble&#39;s panoramic view of a star-forming region",
+    title: "Hubble’s panoramic view of a star-forming region",
     width: 20323,
     height: 16259,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic1206a.jpg",
@@ -694,7 +694,7 @@ const backgroundSources = [
   },
   {
     id: "heic0114a",
-    title: "Nebula NGC 2080, nicknamed the &#39;Ghost Head Nebula&#39;",
+    title: "Nebula NGC 2080, nicknamed the ’Ghost Head Nebula’",
     width: 1348,
     height: 1348,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0114a.jpg",
@@ -991,7 +991,7 @@ const backgroundSources = [
   },
   {
     id: "heic0206d",
-    title: "Hubble&#39;s newest camera eyes hotbed of star formation",
+    title: "Hubble’s newest camera eyes hotbed of star formation",
     width: 3220,
     height: 2415,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0206d.jpg",
@@ -1081,7 +1081,7 @@ const backgroundSources = [
   },
   {
     id: "potw1112a",
-    title: "Spiral key to Universe&#39;s expansion",
+    title: "Spiral key to Universe’s expansion",
     width: 3539,
     height: 4016,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/potw1112a.jpg",
@@ -1648,7 +1648,7 @@ const backgroundSources = [
   },
   {
     id: "heic2111a",
-    title: "Hubble&#39;s View of Jupiter and Europa in August 2020",
+    title: "Hubble’s View of Jupiter and Europa in August 2020",
     width: 742,
     height: 835,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic2111a.jpg",
@@ -1909,7 +1909,7 @@ const backgroundSources = [
   },
   {
     id: "potw1010a",
-    title: "A star&#39;s colourful final splash",
+    title: "A star’s colourful final splash",
     width: 690,
     height: 601,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/potw1010a.jpg",
@@ -2386,7 +2386,7 @@ const backgroundSources = [
   },
   {
     id: "potw1210a",
-    title: "Galaxies&#39; El Dorado",
+    title: "Galaxies’ El Dorado",
     width: 2867,
     height: 1752,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/potw1210a.jpg",
@@ -2575,7 +2575,7 @@ const backgroundSources = [
   },
   {
     id: "heic0601d",
-    title: "The Orion Nebula&#39;s biggest stars",
+    title: "The Orion Nebula’s biggest stars",
     width: 3939,
     height: 2955,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0601d.jpg",
@@ -2602,7 +2602,7 @@ const backgroundSources = [
   },
   {
     id: "heic1808e",
-    title: "Hubble&#39;s 28th birthday picture: The Lagoon Nebula (Uncropped image)",
+    title: "Hubble’s 28th birthday picture: The Lagoon Nebula (Uncropped image)",
     width: 5350,
     height: 6300,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic1808e.jpg",
@@ -2827,7 +2827,7 @@ const backgroundSources = [
   },
   {
     id: "heic0704a",
-    title: "A String of &#39;Cosmic Pearls&#39; Surrounds an Exploding Star",
+    title: "A String of ’Cosmic Pearls’ Surrounds an Exploding Star",
     width: 655,
     height: 512,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0704a.jpg",
@@ -2962,7 +2962,7 @@ const backgroundSources = [
   },
   {
     id: "heic1410c",
-    title: "Jupiter&#39;s Great Red Spot in 2014",
+    title: "Jupiter’s Great Red Spot in 2014",
     width: 800,
     height: 800,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic1410c.jpg",
@@ -2980,7 +2980,7 @@ const backgroundSources = [
   },
   {
     id: "heic1410e",
-    title: "Jupiter&#39;s Great Red Spot in 1995",
+    title: "Jupiter’s Great Red Spot in 1995",
     width: 800,
     height: 800,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic1410e.jpg",
@@ -2998,7 +2998,7 @@ const backgroundSources = [
   },
   {
     id: "heic1907c",
-    title: "Formation of the Southern Crab Nebula (artist&#39;s impression)",
+    title: "Formation of the Southern Crab Nebula (artist’s impression)",
     width: 3840,
     height: 2500,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic1907c.jpg",
@@ -3016,7 +3016,7 @@ const backgroundSources = [
   },
   {
     id: "heic1410d",
-    title: "Jupiter&#39;s Great Red Spot in 2009",
+    title: "Jupiter’s Great Red Spot in 2009",
     width: 800,
     height: 800,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic1410d.jpg",
@@ -3430,7 +3430,7 @@ const backgroundSources = [
   },
   {
     id: "heic0513c",
-    title: "Spitzer and Hubble team up to find &quot;Big Baby&quot; galaxy in the newborn Universe [ACS blow-up]",
+    title: "Spitzer and Hubble team up to find “Big Baby” galaxy in the newborn Universe [ACS blow-up]",
     width: 1275,
     height: 1275,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0513c.jpg",
@@ -3448,7 +3448,7 @@ const backgroundSources = [
   },
   {
     id: "heic0504c",
-    title: "Saturn&#39;s dynamic aurorae 1 (Jan 26, 2004)",
+    title: "Saturn’s dynamic aurorae 1 (Jan 26, 2004)",
     width: 2261,
     height: 1696,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0504c.jpg",
@@ -3457,7 +3457,7 @@ const backgroundSources = [
   },
   {
     id: "heic0504b",
-    title: "Saturn&#39;s dynamic aurorae 1 (Jan 24, 2004)",
+    title: "Saturn’s dynamic aurorae 1 (Jan 24, 2004)",
     width: 2261,
     height: 1696,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0504b.jpg",
@@ -3466,7 +3466,7 @@ const backgroundSources = [
   },
   {
     id: "heic0504d",
-    title: "Saturn&#39;s dynamic aurorae 1 (Jan 28, 2004)",
+    title: "Saturn’s dynamic aurorae 1 (Jan 28, 2004)",
     width: 2261,
     height: 1696,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0504d.jpg",
@@ -3565,7 +3565,7 @@ const backgroundSources = [
   },
   {
     id: "heic0302a",
-    title: "Blaze of stars in an old galaxy&#39;s core",
+    title: "Blaze of stars in an old galaxy’s core",
     width: 627,
     height: 760,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0302a.jpg",
@@ -3718,7 +3718,7 @@ const backgroundSources = [
   },
   {
     id: "heic0609b",
-    title: "The region around Cassiopeia A  (ground-based image)",
+    title: "The region around Cassiopeia A (ground-based image)",
     width: 9796,
     height: 9800,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0609b.jpg",
@@ -3808,7 +3808,7 @@ const backgroundSources = [
   },
   {
     id: "heic0207h",
-    title: "Hubble Provides &#39;One-Two Punch&#39; to See Birth of Stars in Galactic Wreckage",
+    title: "Hubble Provides ’One-Two Punch’ to See Birth of Stars in Galactic Wreckage",
     width: 1180,
     height: 1216,
     src: "https://cdn.spacetelescope.org/archives/images/thumb300y/heic0207h.jpg",

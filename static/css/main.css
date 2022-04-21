@@ -100,15 +100,20 @@ footer {
   z-index: 2;
   bottom: 5px;
   right: 5px;
-  max-width: 30vw;
+  padding: 0px 2px 0px 2px;
   background-color: var(--form-bg-color);
   font-size: min(4vw, 0.8rem);
   font-family: "Saira", sans-serif;
 }
 footer a {
+  display: flex;
+  flex-direction: column;
   color: white;
 }
 @media (max-width: 640px) {
+  form > * {
+    font-size: 0.5rem; /* still working on this */
+  }
   footer {
     font-size: min(2.5vw, 0.7rem);
   }
