@@ -110,11 +110,33 @@ footer a {
   flex-direction: column;
   color: white;
 }
-@media (max-width: 640px) {
+
+@media (max-width: 640px), (orientation: portrait) and (max-width: 800px) {
+  #searchbar-backdrop {
+    height: 85px;
+    padding: 0vh 2vw 0vh 2vw;
+  }
   form > * {
-    font-size: 0.5rem; /* still working on this */
+    height: 40px;
+    font-size: 0.6rem;
+  }
+  form > img {
+    width: 40px;
+  }
+  form > button {
+    width: 40px;
   }
   footer {
     font-size: min(2.5vw, 0.7rem);
+  }
+}
+
+@media (max-width: 800px) and (min-aspect-ratio: 4/6) {
+  main {
+    position: absolute;
+    top: 245px;
+    z-index: 2;
+    width: 100vw;
+    height: 85px;
   }
 }

@@ -51,6 +51,17 @@
   transition: transform var(--rotation-timing-values);
 }
 
+@media (max-width: 640px) {
+  .clock-area {
+    position: absolute;
+    top: 10px;
+    right: calc(50vw - 110px);
+    width: 220px;
+    height: 220px;
+    z-index: 2;
+  }
+}
+
 #clock[data-seconds="0"] {
   /* We use an animation here to prevent the rotation from rolling backward 
    * when the clock ticks over to the next minute */
