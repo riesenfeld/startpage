@@ -41,10 +41,10 @@
 
 #clock {
   background: conic-gradient(#00000000 0deg 270deg, #8000807c 285deg, #0000ff80 300deg, #00800084 315deg, #ffff0088 330deg, #ff45008c 345deg, #ff000090 358deg, #ffffff94 360deg) border-box;
-  mask-image: url("/static/images/ring_mask.svg");
+  mask-image: url("../images/ring_mask.svg");
   mask-size: 100%;
   /* vendor prefix required for chromium-based browsers */
-  -webkit-mask-image: url("/static/images/ring_mask.svg");
+  -webkit-mask-image: url("../images/ring_mask.svg");
   -webkit-mask-size: 100%;
   border-radius: 50%;
   border: 4px solid transparent;

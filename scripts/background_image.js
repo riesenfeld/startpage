@@ -78,12 +78,12 @@ const setBackgroundImage = function (obj, imageURL) {
     obj.title = insertLineBreak(obj.title)
   }
   info.innerHTML = `<a href="${infoURL}">${obj.title}</a>`
-  console.log("Permanent URL for this background image: ?id=" + obj.id)
 }
 
 const setLowResBackgroundImage = function (obj) {
   const url = `https://cdn.spacetelescope.org/archives/images/thumb300y/${obj.id}.jpg`
   setBackgroundImage(obj, url)
+  console.log("Permanent URL for this background image: https://aronriesenfeld.com/startpage/index.html?id=" + obj.id)
 }
 
 const initBackgroundImage = function () {

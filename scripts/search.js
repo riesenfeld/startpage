@@ -22,16 +22,16 @@ const forwardSearch = function () {
 const updateImage = function (value) {
   switch (value) {
     case "google":
-      searchTypeImage.src = "/static/images/google_logo.svg"
+      searchTypeImage.src = "static/images/google_logo.svg"
       break
     case "wikipedia":
-      searchTypeImage.src = "/static/images/wiki_logo.svg"
+      searchTypeImage.src = "static/images/wiki_logo.svg"
       break
     case "amazon":
-      searchTypeImage.src = "/static/images/amazon_logo.svg"
+      searchTypeImage.src = "static/images/amazon_logo.svg"
       break
     default:
-      searchTypeImage.src = "/static/images/ddg_logo.svg"
+      searchTypeImage.src = "static/images/ddg_logo.svg"
       break
   }
 }
