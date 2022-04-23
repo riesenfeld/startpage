@@ -40,7 +40,7 @@ const makeFallbackURL = function (imageID) {
 const getObject = function (imageID) {
   var getObjectParams = {
     Bucket: "riesenfeld.dev",
-    Key: `files/${imageID}.jpg`,
+    Key: `files/hubble/screen/${imageID}.jpg`,
   }
   s3.getObject(getObjectParams, function (err, data) {
     if (err) {

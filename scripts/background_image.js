@@ -56,7 +56,6 @@ const insertLineBreak = function (titleText) {
 
 const setBackgroundImage = function (obj, imageURL) {
   const resource = obj.url
-  // const imageURL = `https://cdn.spacetelescope.org/archives/images/screen/${obj.id}.jpg`
   const infoURL = `https://esahubble.org${resource}`
   const windowOrientation = detectWindowOrientation()
   const imageOrientation = detectImageOrientation(obj)
@@ -82,18 +81,25 @@ const setBackgroundImage = function (obj, imageURL) {
   console.log("Permanent URL for this background image: ?id=" + obj.id)
 }
 
+const setLowResBackgroundImage = function (obj) {
+  const url = `https://cdn.spacetelescope.org/archives/images/thumb300y/${obj.id}.jpg`
+  setBackgroundImage(obj, url)
+}
+
 const initBackgroundImage = function () {
   let obj = getImageFromQueryParams()
   if (obj == null) {
     obj = chooseRandomBackgroundImage()
   }
+  /* We can set the background faster by first grabbing a low-resolution version
+   * of the image we want, and then replacing it later. */
+  setLowResBackgroundImage(obj)
   worker.addEventListener("message", (message) => {
     setBackgroundImage(obj, message.data)
   })
   worker.postMessage({
     command: "fetch",
-    // id: obj.id,
-    id: "potw1112a",
+    id: obj.id,
   })
 }
 
